@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>飞翔鸟</title>
     <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
 </head>
 <body background="https://cdn.jsdelivr.net/gh/hshanx/static@v1.0.2/default-bg.jpeg">
@@ -13,7 +13,7 @@
     <form style="align-content: center">
         <br><br><br><br><br><br><br><br><br><br><br><br>
         <input type="text" id="site" style="width:600px;
-            height:35px; font-size: 16px" placeholder="输入链接及密码"/>
+            height:35px; font-size: 16px" placeholder="输入飞行目的地"/>
 
         <input type="button" value="起飞" id="btn" onclick="jump()"
                style="width:60px; height:35px; font-size: 16px">
@@ -32,7 +32,7 @@
     function jump() {
         var site = $("#site").val();
         if (site === '' || site === undefined || site == null) {
-            alert("没有输入链接！");
+            alert("没有输入飞行目的地！");
             return;
         }
         window.location.href = "https://go.shabi.one/fly/" + site;
