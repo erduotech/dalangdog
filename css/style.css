@@ -1,9 +1,10 @@
+
 :root{
     --body-bg          : #F1F3F4;
     --bg               : #fffffe;
     --color            : #464747;
     --focus            : #4693f1;
-    --pre_a            : #59a8d7;
+    --pre_a            : #ff9810;
     --scrollbar-track  : #d8dadc;
     --scrollbar-thumb  : #b9bdc1;
     --red              : #ff496d;
@@ -15,7 +16,7 @@
 @media (prefers-color-scheme: dark) {
     :root{
         --body-bg          : #303841;
-        --bg               : #4f565e99;
+        --bg               : #b6b6b699;
         --color            : #fefefe;
         --a_hover          : #f2976699;
         --scrollbar-track  : #444b53;
@@ -70,6 +71,11 @@ body {
     font-size: .8rem;
     background-color: var(--body-bg);
     text-rendering: optimizeLegibility;
+	position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-attachment:fixed;
 }
 
 input ,button{
@@ -79,6 +85,23 @@ input ,button{
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
+}
+
+input{color:#333;}
+input::-webkit-input-placeholder {
+    color: ff7800;
+}
+input:-moz-placeholder {
+    /* FF 4-18 */
+    color: ff7800;
+}
+input::-moz-placeholder {
+    /* FF 19+ */
+    color: ff7800;
+}
+input:-ms-input-placeholder {
+    /* IE 10+ */
+    color: ff7800;
 }
 
 @media screen and (max-width: 415px) {
@@ -149,6 +172,7 @@ input ,button{
     cursor: pointer;
     min-width: 4rem;
     text-align: center;
+	font-weight: bold;
 }
 
 .default{
@@ -380,11 +404,16 @@ footer{
     font-size: 85%;
     /*text-decoration: none;*/
     /*color: var(--color);*/
+
+    color: #ffffff; 
+
 }
 footer a{
     /*text-decoration: none;*/
     color: var(--color);
 }
+sub a {color: #ffffff;
+	}
 #load{
     position: fixed;
     top: 0;
