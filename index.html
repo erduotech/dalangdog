@@ -2,37 +2,43 @@
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8">
-    <title>大狼狗跨域追踪</title>
-    <meta name="description" content="大狼狗跨域追踪。">
-    <meta name="keyword" content="大狼狗跨域追踪">
+    <title>浪狗跨域追踪 Da.Lang.Dog</title>
+    <meta name="description" content="浪狗跨域追踪。">
+    <meta name="keyword" content="浪狗跨域追踪">
     <meta name="author" content="Lang.Dog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" href="/favicon.ico">
+    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="favicon.ico">
     <script src="https://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
   </head>
   
-  <body style='padding-top: 25vh;' background="images/bg3.webp">
+  <body style='padding-top: 25vh;' background="images/bg3.jpg">
     <nav class="head">
       <a href="./">
-        <h1>DNS</h1>
-        <sup>CODES</sup></a>
+        <h1>浪狗跨域追踪</h1>
+        <sup>嗜血狂暴恶犬出没，请谨慎使用！</sup></a>
     </nav>
     <div class="ui-input">
       <form>
         <input class="sub" type="text" id="site" placeholder="输入追踪目的地">
-        <button class="default" type="button" value="起飞" id="btn" onclick="jump()">追踪</button></form>
+        <button class="default" type="button" value="追踪" id="btn" onclick="jump()">追踪</button></form>
     </div>
     <div id="content"></div>
     <footer>
-      <p>&copy; 2023</p>
+      <p>&copy; Da.Lang.Dog 2023</p>
     </footer>
     <div id="load" style='display: none;'>
       <div></div>
     </div>
-
+	
+ <style>
+    input::-webkit-input-placeholder {
+	color: #f5deb3;
+    }
+    </style>
+	
     <script type="text/javascript">//敲回车键相当于确认键
       document.onkeydown = function(event) {
         var code = event.keyCode;
@@ -44,7 +50,7 @@
       function jump() {
         var site = $("#site").val();
         if (site === '' || site === undefined || site == null) {
-          alert("没有输入飞行目的地！");
+          alert("没有输入追踪目的地！");
           return;
         }
         window.location.href = "https://go.shabi.one/fly/" + site;
